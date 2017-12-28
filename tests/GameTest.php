@@ -23,7 +23,7 @@ class GameTest extends TestCase
     public function testGutterGame()
     {
         $this->rollMany(20, 0);
-        $this->assertSame(0, $this->game->getScore());
+        $this->assertSame(0, $this->game->score());
     }
 
     /**
@@ -32,7 +32,16 @@ class GameTest extends TestCase
     public function testAllOnes()
     {
         $this->rollMany(20, 1);
-        $this->assertSame(20, $this->game->getScore());
+        $this->assertSame(20, $this->game->score());
+    }
+
+    public function testOneSpare()
+    {
+        $this->game->roll(5);
+        $this->game->roll(5); //spare
+        $this->game->roll(3); //spare
+        $this->rollMany(17, 0);
+        $this->assertSame(16, $this->game->score());
     }
 
     /**
