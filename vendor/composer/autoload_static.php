@@ -19,10 +19,6 @@ class ComposerStaticInit4236ca5172e527d54ba719507972ef6a
         array (
             'Webmozart\\Assert\\' => 17,
         ),
-        'T' => 
-        array (
-            'Tests\\' => 6,
-        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -30,6 +26,7 @@ class ComposerStaticInit4236ca5172e527d54ba719507972ef6a
         ),
         'B' => 
         array (
+            'BowlingGameKata\\Tests\\' => 22,
             'BowlingGameKata\\' => 16,
         ),
     );
@@ -45,10 +42,6 @@ class ComposerStaticInit4236ca5172e527d54ba719507972ef6a
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
-        'Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
-        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -57,9 +50,13 @@ class ComposerStaticInit4236ca5172e527d54ba719507972ef6a
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'BowlingGameKata\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
         'BowlingGameKata\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
