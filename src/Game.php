@@ -4,13 +4,24 @@ namespace BowlingGameKata;
 
 class Game
 {
+    /**
+     * @var int
+     */
+    private $score = 0;
+
+    /**
+     * @param int $pins
+     */
     public function roll($pins)
     {
-
+        $this->score += $pins;
     }
 
-    public function score()
+    /**
+     * @return int
+     */
+    public function getScore()
     {
-        return 0;
+        return $this->score;
     }
 }
