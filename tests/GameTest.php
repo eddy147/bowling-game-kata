@@ -35,12 +35,28 @@ class GameTest extends TestCase
         $this->assertSame(20, $this->game->score());
     }
 
+    /**
+     * @testdox Test we get extra points when we have a spare.
+     */
     public function testOneSpare()
     {
         $this->rollSpare();
         $this->game->roll(3); //spare
         $this->rollMany(17, 0);
         $this->assertSame(16, $this->game->score());
+    }
+
+    /**
+     * @testdox Test we get extra points for throwing a strike.
+     */
+    public function testOneStrike()
+    {
+        $this->game->roll(10);
+        $this->game->roll(3);
+        $this->game->roll(4);
+        $this->rollMany(16, 0);
+
+        $this->assertEquals(24, $this->game->score());
     }
 
     /**
